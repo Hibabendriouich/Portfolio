@@ -1723,6 +1723,15 @@ section {
   color: var(--primary);
 }
 
+.chcard {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chcard:hover {
+    transform: translateY(-5px);
+}
+
 /* ===================== TESTIMONIALS ===================== */
 #testimonials {
   background: #fff;
@@ -3166,100 +3175,258 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
    
       <section id="menu">
-         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-               <span class="slbl">Documents</span>
-               <h2 class="stitle">Rapports de <span>fin des modules</span></h2>
-               <div class="sline"></div>
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">Documents</span>
+            <h2 class="stitle">Rapports de <span>fin des modules</span></h2>
+            <div class="sline"></div>
+        </div>
+
+        <!-- Boutons S1 / S2 -->
+        <div class="text-center mb-4">
+            <button class="filtbtn active" data-f="s1">S1</button>
+            <button class="filtbtn" data-f="s2">S2</button>
+        </div>
+
+        <div class="row g-3 justify-content-center">
+
+            <!-- Planification -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in">
+                <div class="catcard" data-pdf="docs/Rapport_Planification.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Planification</div>
+                    <div class="catct">Mme. Rajae TAMRI</div>
+                </div>
             </div>
-            <!-- FIX 3 � filter buttons -->
-            <div class="text-center mb-4">
-   <button class="filtbtn active" data-f="s1">S1</button>
-   <button class="filtbtn" data-f="s2">S2</button>
-</div>
+
+            <!-- Gestion 1 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="70">
+                <div class="catcard" data-pdf="docs/Rapport_Gestion1.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Gestion 1</div>
+                    <div class="catct">Mme. Rajae TAMRI</div>
+                </div>
+            </div>
+
+            <!-- Didactique -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="140">
+                <div class="catcard" data-pdf="docs/Rapport_Didactique.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Didactique</div>
+                    <div class="catct">Mme. Ouafae SERRAR</div>
+                </div>
+            </div>
+
+            <!-- Méthodologie -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="210">
+                <div class="catcard" data-pdf="docs/rapport_RA.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Méthodologie de Recherche Action</div>
+                    <div class="catct">Mr. Soufian BARIBI</div>
+                </div>
+            </div>
+
+            <!-- Sciences de l'Éducation -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="280">
+                <div class="catcard" data-pdf="docs/rapport_se.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Sciences de l'Éducation</div>
+                    <div class="catct">Mr. Hassan Khouyi</div>
+                </div>
+            </div>
+
+            <!-- Renforcement 1 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="350">
+                <div class="catcard" data-pdf="docs/Rapport_renf1.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Renforcement 1</div>
+                    <div class="catct">Mr. Radouane IQDOUR</div>
+                </div>
+            </div>
+
+            <!-- Renforcement 2 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="420">
+                <div class="catcard" data-pdf="docs/Rapport_renf2.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Renforcement 2</div>
+                    <div class="catct">Mr. Mohamed SNINEH</div>
+                </div>
+            </div>
+
+            <!-- TICE -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="490">
+                <div class="catcard" data-pdf="docs/rapport_tice.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">TICE</div>
+                    <div class="catct">Mr. Mohamed SNINEH</div>
+                </div>
+            </div>
+
+            <!-- Module S2 -->
             <div class="row g-3 justify-content-center">
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
-                  <div class="catcard " data-filter="all">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Planification</div>
-                     <div class="catct">Mme. Rajae TAMRI</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="70">
-                  <div class="catcard" data-filter="burgers">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Gestion 1</div>
-                     <div class="catct">Mme. Rajae TAMRI</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="140">
-                  <div class="catcard" data-filter="pizza">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Didactique</div>
-                     <div class="catct">Mme. Ouafae SERRAR</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="210">
-                  <div class="catcard" data-filter="chicken">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Méthodologie de Recherche Action</div>
-                     <div class="catct">Mr. Soufian BARIBI</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="280">
-                  <div class="catcard" data-filter="wraps">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Sciences de l'Éducation</div>
-                     <div class="catct">Mr. Hassan Khouyi</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
-                  <div class="catcard" data-filter="desserts">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Renforcement 1</div>
-                     <div class="catct">Mr. Radouane IQDOUR</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
-                  <div class="catcard" data-filter="desserts">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">Renforcement 2</div>
-                     <div class="catct">Mr. Mohamed SNINEH</div>
-                  </div>
-               </div>
-               <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
-                  <div class="catcard" data-filter="desserts">
-                     <img class="catimg" src="img/module.jpg" alt=""/>
-                     <div class="catnm">TICE</div>
-                     <div class="catct">Mr. Mohamed SNINEH</div>
-                  </div>
-               </div>
+
+            <!-- Evaluation -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in">
+                <div class="catcard" data-pdf="docs/Rapport_Evaluation.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Evaluation</div>
+                    <div class="catct">Mme. Rajae TAMRI</div>
+                </div>
             </div>
-         </div>
-      </section>
+
+            <!-- Gestion 2 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="70">
+                <div class="catcard" data-pdf="docs/Rapport_Gestion2.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Gestion 2</div>
+                    <div class="catct">Mme. Rajae TAMRI</div>
+                </div>
+            </div>
+
+            <!-- Analyse des pratiques -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="140">
+                <div class="catcard" data-pdf="docs/Rapport_AP.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Analyse des pratiques</div>
+                    <div class="catct">Mme. Ouafae SERRAR</div>
+                </div>
+            </div>
+
+            <!-- Production didactique -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="210">
+                <div class="catcard" data-pdf="docs/rapport_PD.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Production didactique</div>
+                    <div class="catct">Mr. Soufian BARIBI</div>
+                </div>
+            </div>
+
+            <!-- Vie scolaire -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="280">
+                <div class="catcard" data-pdf="docs/rapport_VS.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Vie scolaire</div>
+                    <div class="catct">Mr. Hassan Khouyi</div>
+                </div>
+            </div>
+
+            <!-- Renforcement 3 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="350">
+                <div class="catcard" data-pdf="docs/Rapport_renf3.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Renforcement 3</div>
+                    <div class="catct">Mr. Radouane IQDOUR</div>
+                </div>
+            </div>
+
+            <!-- Renforcement 4 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="420">
+                <div class="catcard" data-pdf="docs/Rapport_renf4.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Renforcement 4</div>
+                    <div class="catct">Mr. Radouane IQDOUR</div>
+                </div>
+            </div>
+
+            <!-- Deontologie -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="490">
+                <div class="catcard" data-pdf="docs/rapport_deonto.pdf">
+                    <img class="catimg" src="img/module.jpg" alt="">
+                    <div class="catnm">Déontologie</div>
+                    <div class="catct">Mr. Abdeljebbar KARIMI</div>
+                </div>
+            </div> 
+
+        </div>
+    </div>
+</section>
+
+<!-- POPUP PDF -->
+<div class="modal fade" id="pdfModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Rapport du module</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body p-0">
+                <iframe id="pdfViewer"
+                        width="100%"
+                        height="700"
+                        style="border:none;">
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+// -------- Popup PDF --------
+document.querySelectorAll(".catcard").forEach(card => {
+
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function () {
+
+        const pdfPath = this.getAttribute("data-pdf");
+
+        document.getElementById("pdfViewer").src = pdfPath;
+
+        const modal = new bootstrap.Modal(
+            document.getElementById("pdfModal")
+        );
+
+        modal.show();
+    });
+
+});
+
+
+// -------- Filtre S1 / S2 --------
+const buttons = document.querySelectorAll(".filtbtn");
+const modules = document.querySelectorAll(".module-card");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        // bouton actif
+        buttons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        const semestre = this.dataset.f;
+
+        modules.forEach(module => {
+
+            if (module.dataset.semestre === semestre) {
+                module.style.display = "";
+            } else {
+                module.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+
+// Afficher seulement S1 au chargement
+modules.forEach(module => {
+
+    if (module.dataset.semestre !== "s1") {
+        module.style.display = "none";
+    }
+
+});
+
+</script>
       
-      <div id="menuPop">
-         <div class="mpbox">
-            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
-            <div class="mpimg"><img id="mpImg" src="" alt=""/></div>
-            <div class="mpbody">
-               <div id="mpCat"></div>
-               <div id="mpTitle"></div>
-               <div id="mpStars"></div>
-               <div id="mpDesc"></div>
-               <div id="mpPrice"></div>
-               <div class="mpmeta" id="mpMeta"></div>
-               <div class="mpqty">
-                  <button class="mpqbtn" id="mpMinus">-</button>
-                  <span class="mpqnum" id="mpQnum">1</span>
-                  <button class="mpqbtn" id="mpPlus">+</button>
-                  <span style="font-size:.82rem;color:#aaa;margin-left:9px;">portion</span>
-               </div>
-               <div class="mptags" id="mpTags"></div>
-               <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-            </div>
-         </div>
-      </div>
       <!-- SPECIAL OFFER -->
       <section id="special">
          <div class="spbg"></div>
@@ -3440,7 +3607,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
             </div>
             <div class="row g-4">
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="0">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/rapport1.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Rapport 1</div>
                      </div>
@@ -3450,7 +3617,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/rapport2.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Rapport 2</div>
                      </div>
@@ -3460,7 +3627,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche1.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 1</div>
                   
@@ -3471,7 +3638,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche2.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 2</div>
                      </div>
@@ -3481,7 +3648,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche3.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 3</div>
                      </div>
@@ -3491,7 +3658,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                 <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche4.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 4</div>
                      </div>
@@ -3504,7 +3671,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
             <br/><br/>
             <div class="row g-4">
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="0">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche5.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 5</div>
                      </div>
@@ -3515,7 +3682,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche6.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 6</div>
                      </div>
@@ -3525,7 +3692,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche7.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 7</div>
                      </div>
@@ -3535,17 +3702,17 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche8.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 8</div>
                      </div>
                      <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
+                        <div class="chrole">Fiche d'observation & Fiche Pédagogique</div>
                      </div>
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche9.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 9</div>
                      </div>
@@ -3555,7 +3722,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                   </div>
                </div>
                 <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard">
+                  <div class="chcard" data-pdf="docs/fiche10_11.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 10 & 11</div>
                      </div>
@@ -3566,6 +3733,28 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
                </div>
             </div>
          </div>
+         <script>
+document.querySelectorAll(".chcard").forEach(card => {
+
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function () {
+
+        const pdfPath = this.getAttribute("data-pdf");
+
+        if (!pdfPath) return;
+
+        document.getElementById("pdfViewer").src = pdfPath;
+
+        const modal = new bootstrap.Modal(
+            document.getElementById("pdfModal")
+        );
+
+        modal.show();
+    });
+
+});
+</script>
       </section>
 
       
@@ -3573,6 +3762,293 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 	  
       
 	  
+<style>
+.carousel-section {
+  padding: 80px 0;
+  background: #f9f5f0;
+  font-family: 'Poppins', sans-serif;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.slbl {
+  font-family: cursive;
+  font-size: 1.3rem;
+  color: #e8281a;
+  display: block;
+  margin-bottom: 4px;
+}
+.stitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+.stitle span { color: #e8281a; }
+.sline {
+  width: 58px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e8281a, #f6a623);
+  margin: 0 auto;
+}
+.carousel-wrap {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.carousel-track-outer {
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.13);
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+}
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  background: #1a1a1a;
+}
+.carousel-slide img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.92;
+}
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 28px 22px;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+}
+.slide-tag {
+  display: inline-block;
+  background: #e8281a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 12px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 7px;
+}
+.slide-caption h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  font-family: Georgia, serif;
+}
+.slide-caption p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.78rem;
+  margin: 0;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  z-index: 2;
+  font-size: 1rem;
+  color: #333;
+}
+.carousel-btn:hover {
+  background: #e8281a;
+  color: #fff;
+  transform: translateY(-50%) scale(1.08);
+}
+.btn-prev { left: 4px; }
+.btn-next { right: 4px; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  padding: 0;
+}
+.dot.active {
+  background: #e8281a;
+  transform: scale(1.3);
+}
+.slide-counter {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
+</style>
+
+<section class="carousel-section">
+  <div class="section-header">
+    <span class="slbl">Galerie</span>
+    <h2 class="stitle">Moments de la <span>Formation</span></h2>
+    <div class="sline"></div>
+  </div>
+
+  <div class="carousel-wrap">
+
+    <div class="carousel-track-outer">
+      <div class="carousel-track" id="track">
+
+        <div class="carousel-slide">
+          <img src="img/etudsarduino.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Atelier Arduino</h3>
+            <p>Atelier d'initiation à Arduino | Feu de Circulation</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/arduino2.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Atelier Arduino</h3>
+            <p>Atelier d'initiation à Arduino | Feu de Circulation</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/hibaprof.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">MSP</span>
+            <h3>Lycée Technique Mohammed VI</h3>
+            <p>Mise en situation professionnelle — QCM sur Kahoot</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/planification.jpeg" alt="MSP 2"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Atelier de Planification</h3>
+            <p>Réalisation d'un Flip Chart basé sur la Taxonomie de Bloom</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/integration.jpeg" alt="MSP 3"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Journée d'intégration</h3>
+            <p>Journée d'intégration organisé par le club Pen CRMEF</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/coursarchi.jpeg" alt="MSP 4"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Cours | Renforcement 1</h3>
+            <p>Animation d'un cours sur la numération et le codage de l’information</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/tparchi.jpeg" alt="MSP 5"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>TP | Architecture des Ordinateurs</h3>
+            <p>Atelier sur l'architecture des ordinateurs</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/iftar.jpeg" alt="MSP 5"/>
+          <div class="slide-caption">
+            <span class="slide-tag">Moment de partage</span>
+            <h3>Activité hors du cadre de formation</h3>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <button class="carousel-btn btn-prev" id="prev" aria-label="Précédent">&#8592;</button>
+    <button class="carousel-btn btn-next" id="next" aria-label="Suivant">&#8594;</button>
+
+  </div>
+
+  <div class="carousel-dots" id="dots"></div>
+  <div class="slide-counter" id="counter">1 / 5</div>
+</section>
+
+<script>
+var track = document.getElementById('track');
+var dotsWrap = document.getElementById('dots');
+var counter = document.getElementById('counter');
+var slides = track.querySelectorAll('.carousel-slide');
+var total = slides.length;
+var current = 0;
+var autoTimer;
+
+slides.forEach(function(_, i) {
+  var d = document.createElement('button');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.setAttribute('aria-label', 'Slide ' + (i+1));
+  d.addEventListener('click', function() { goTo(i); });
+  dotsWrap.appendChild(d);
+});
+
+function goTo(n) {
+  current = (n + total) % total;
+  track.style.transform = 'translateX(-' + (current * 100) + '%)';
+  dotsWrap.querySelectorAll('.dot').forEach(function(d, i) {
+    d.classList.toggle('active', i === current);
+  });
+  counter.textContent = (current + 1) + ' / ' + total;
+}
+
+document.getElementById('prev').addEventListener('click', function() {
+  goTo(current - 1);
+  restartAuto();
+});
+document.getElementById('next').addEventListener('click', function() {
+  goTo(current + 1);
+  restartAuto();
+});
+
+function startAuto() {
+  autoTimer = setInterval(function() { goTo(current + 1); }, 3500);
+}
+function restartAuto() {
+  clearInterval(autoTimer);
+  startAuto();
+}
+
+startAuto();
+</script>
+
       <!-- TESTIMONIALS -->
       <section id="testimonials">
          <div class="container">
