@@ -1618,7 +1618,6 @@ section {
 .chnm {
   font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 2px;
 }
 .chrole {
   font-size: 0.78rem;
@@ -2845,6 +2844,44 @@ footer {
     font-size: 1.8rem;
   }
 }
+.report-card{
+    max-width: 280px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.report-card:hover{
+    transform: translateY(-5px);
+}
+
+.report-img{
+    background: #dc3545;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start; /* texte en haut */
+    align-items: center;
+}
+
+.pdf-icon{
+    font-size: 65px;
+    color: #dc3545;
+    margin-bottom: 10px;
+    display: block;
+}
+.chnm{
+    margin: 0;
+    padding: 0;
+}
+.chnm{
+    color: #000;
+    font-weight: 600;
+}
 
    </style>
    </head>
@@ -3256,7 +3293,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
             <!-- TICE -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="490">
-                <div class="catcard" data-pdf="docs/rapport_tice.pdf">
+                <div class="catcard" data-pdf="docs/Rapport_TICE.pdf">
                     <i class="fas fa-laptop-code"></i>
                     <div class="catnm">TICE</div>
                     <div class="catct">Mr. Mohamed SNINEH</div>
@@ -3277,7 +3314,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
             <!-- Gestion 2 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="70">
-                <div class="catcard" data-pdf="docs/Rapport_Gestion2.pdf">
+                <div class="catcard" data-pdf="docs/Rapport_Module_Gestion2.pdf">
                      <i class="fas fa-briefcase"></i>
                     <div class="catnm">Gestion 2</div>
                     <div class="catct">Mme. Rajae TAMRI</div>
@@ -3295,7 +3332,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
             <!-- Production didactique -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="210">
-                <div class="catcard" data-pdf="docs/rapport_PD.pdf">
+                <div class="catcard" data-pdf="docs/rapport_pd.pdf">
                      <i class="fas fa-pen-ruler"></i>
                     <div class="catnm">Production didactique</div>
                     <div class="catct">Mr. Soufian BARIBI</div>
@@ -3304,7 +3341,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
             <!-- Vie scolaire -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="280">
-                <div class="catcard" data-pdf="docs/rapport_VS.pdf">
+                <div class="catcard" data-pdf="docs/Rapport_VS.pdf">
                     <i class="fas fa-school"></i>
                     <div class="catnm">Vie scolaire</div>
                     <div class="catct">Mr. Hassan Khouyi</div>
@@ -3313,7 +3350,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
             <!-- Renforcement 3 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="350">
-                <div class="catcard" data-pdf="docs/Rapport_renf3.pdf">
+                <div class="catcard" data-pdf="docs/Rapport_Reseau.pdf">
                     <i class="fas fa-book-open"></i>
                     <div class="catnm">Renforcement 3</div>
                     <div class="catct">Mr. Radouane IQDOUR</div>
@@ -3322,7 +3359,7 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
             <!-- Renforcement 4 -->
             <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="420">
-                <div class="catcard" data-pdf="docs/Rapport_renf4.pdf">
+                <div class="catcard" data-pdf="docs/Rapport_Developpement.pdf">
                     <i class="fas fa-book-reader"></i>
                     <div class="catnm">Renforcement 4</div>
                     <div class="catct">Mr. Radouane IQDOUR</div>
@@ -3427,6 +3464,76 @@ modules.forEach(module => {
 
 </script>
       
+
+    <section id="realisations">
+   <div class="container">
+      <div class="row align-items-center g-5">
+
+         <!-- Texte à gauche -->
+         <div class="col-lg-6" data-aos="fade-right">
+
+            <span class="slbl">Productions pédagogiques</span>
+
+            <h2 class="stitle text-start">
+               Mes <span>réalisations au CRMEF</span>
+            </h2>
+
+            <div class="sline lft"></div>
+
+            <p class="sdesc mb-4">
+               Cette rubrique regroupe les différentes présentations,
+               fiches pédagogiques et travaux réalisés tout au long de ma
+               formation au CRMEF.
+            </p>
+
+            <p class="sdesc">
+               Les documents sont classés par modules afin de faciliter leur
+               consultation et de mettre en valeur les compétences développées
+               durant le parcours de formation.
+            </p>
+
+         </div>
+
+         <!-- Carte à droite -->
+         <div class="col-lg-6" data-aos="fade-left">
+
+            <div class="mcard">
+
+               <div class="mimg">
+                  <img src="img/presentation.jpg" alt="Ressources pédagogiques">
+               </div>
+
+               <div class="mbody">
+
+                  <div class="mcat">Ressources pédagogiques</div>
+
+                  <div class="mtit">
+                     Présentations, fiches et travaux du CRMEF
+                  </div>
+
+                  <div class="mdesc">
+                     Accéder à l'ensemble des dossiers organisés par modules.
+                  </div>
+
+                  <div class="text-center mt-4">
+                     <a href="https://drive.google.com/drive/folders/1VopcOzGXWRxpaOSbvg1HzF4NxNVB6ZTT?usp=sharing"
+                        target="_blank"
+                        class="btn-red">
+                        <i class="fas fa-folder-open"></i>
+                        Consulter les ressources
+                     </a>
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+</section>
+
       <!-- SPECIAL OFFER -->
       <section id="special">
          <div class="spbg"></div>
@@ -3579,6 +3686,25 @@ modules.forEach(module => {
                   <img src="img/msp.jpeg" alt="Wraps"/>
                </div>
             </div>
+            
+            <div class="mt-4 d-flex justify-content-center">
+
+    <div class="chcard report-card"
+         data-pdf="docs/rapport2.pdf"
+         onclick="openPdfModal(this.getAttribute('data-pdf'))">
+
+        <div class="chimg report-img">
+
+
+            <div class="chnm">
+    Consulter le rapport de la journée Coding Python
+</div>
+
+        </div>
+
+    </div>
+
+</div>
          </div>
       </section>
       <!-- FIX 7 � GALLERY POPUP -->
@@ -3617,12 +3743,12 @@ modules.forEach(module => {
                   </div>
                </div>
                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
-                  <div class="chcard" data-pdf="docs/rapport2.pdf">
+                  <div class="chcard" data-pdf="docs/Rapport_MSP.pdf">
                      <div class="chimg" style="background-color: #f0f0f0;">
                         <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Rapport 2</div>
                      </div>
                      <div class="chbody">
-                        <div class="chrole"> Journée Coding </div>
+                        <div class="chrole"> Rapport de stage </div>
                      </div>
                   </div>
                </div>
@@ -3757,7 +3883,6 @@ document.querySelectorAll(".chcard").forEach(card => {
 </script>
       </section>
 
-      
 	  
 	  
       
@@ -3807,7 +3932,7 @@ document.querySelectorAll(".chcard").forEach(card => {
 }
 .carousel-track {
   display: flex;
-  transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+  transition: transform 1s cubic-bezier(.4,0,.2,1);
 }
 .carousel-slide {
   min-width: 100%;
