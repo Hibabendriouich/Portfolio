@@ -2882,7 +2882,11 @@ footer {
     color: #000;
     font-weight: 600;
 }
-
+#evaluations {
+    background: #fafafa;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
    </style>
    </head>
    <body>
@@ -3687,22 +3691,14 @@ modules.forEach(module => {
                </div>
             </div>
             
-            <div class="mt-4 d-flex justify-content-center">
+           <div class="mt-4 d-flex justify-content-center">
 
-    <div class="chcard report-card"
-         data-pdf="docs/rapport2.pdf"
-         onclick="openPdfModal(this.getAttribute('data-pdf'))">
-
-        <div class="chimg report-img">
-
-
-            <div class="chnm">
-    Consulter le rapport de la journée Coding Python
-</div>
-
-        </div>
-
-    </div>
+    <button type="button"
+            class="btn-red"
+            onclick="window.open('docs/rapport2.pdf', '_blank')">
+        <i class="fas fa-folder-open"></i>
+        Consulter le rapport de la journée Coding Python
+    </button>
 
 </div>
          </div>
@@ -3882,12 +3878,187 @@ document.querySelectorAll(".chcard").forEach(card => {
 });
 </script>
       </section>
+<section id="evaluations">
+   <div class="container">
 
+      <div class="text-center mb-5" data-aos="fade-up">
+         <span class="slbl">Évaluations</span>
+         <h2 class="stitle">Exemples d’<span>Évaluations et Grilles</span></h2>
+         <div class="sline"></div>
+      </div>
+
+      <div class="row g-4">
+<div class="row g-4 justify-content-center">
+         <!-- Évaluation 1 -->
+         <div class="col-sm-6 col-lg-2" data-aos="fade-up">
+            <div class="chcardE" data-pdf="docs/devoir.pdf">
+               <div class="chimgE" style="background-color:#f0f0f0;">
+                  <div class="chnmE" style="text-align:center; margin:20px; color:#000;">
+                    <i class="fas fa-file-alt" style="margin-bottom:8px; display:block; font-size:18px; color:#ff0000;"></i>
+                     Devoir à domicile
+                  </div>
+               </div>
+               <div class="chbodyE">
+                  <div class="chroleE">Sujet</div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Évaluation 2 -->
+         <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
+            <div class="chcardE" data-pdf="docs/ctrlAlgo.pdf">
+               <div class="chimgE" style="background-color:#f0f0f0;">
+                  <div class="chnmE" style="text-align:center; margin:20px; color:#000;">
+                    <i class="fas fa-file-alt" style="margin-bottom:8px; display:block; font-size:18px; color:#ff0000;"></i>
+                     Contrôle d'Algorithme
+                  </div>
+               </div>
+               <div class="chbodyE">
+                  <div class="chroleE">Sujet</div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Évaluation 3 -->
+         <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
+            <div class="chcardE" data-pdf="docs/tpExcel1.pdf">
+               <div class="chimgE" style="background-color:#f0f0f0;">
+                  <div class="chnmE" style="text-align:center; margin:20px; color:#000;">
+                    <i class="fas fa-file-alt" style="margin-bottom:8px; display:block; font-size:18px; color:#ff0000;"></i>
+                     Evaluation pratique en Excel n°1
+                  </div>
+               </div>
+               <div class="chbodyE">
+                  <div class="chroleE">Sujet</div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
+            <div class="chcardE" data-pdf="docs/tpExcel2.pdf">
+               <div class="chimgE" style="background-color:#f0f0f0;">
+                  <div class="chnmE" style="text-align:center; margin:20px; color:#000;">
+                    <i class="fas fa-file-alt" style="margin-bottom:8px; display:block; font-size:18px; color:#ff0000;"></i>
+                     Evaluation pratique en Excel n°2
+                  </div>
+               </div>
+               <div class="chbodyE">
+                  <div class="chroleE">Sujet</div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Grille générale -->
+         <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
+            <div class="chcardE" data-pdf="docs/grille.pdf">
+               <div class="chimgE" style="background-color:#f0f0f0;">
+                  <div class="chnmE" style="text-align:center; margin:20px; color:#000;">
+                    <i class="fas fa-file-alt" style="margin-bottom:8px; display:block; font-size:18px; color:#ff0000;"></i>
+                     Grille de correction de l'évaluation pratique
+                  </div>
+               </div>
+               <div class="chbodyE">
+                  <div class="chroleE">Critères et barème</div>
+               </div>
+            </div>
+         </div>
+</div>
+      </div>
+   </div>
+   <script>
+document.querySelectorAll(".chcardE").forEach(card => {
+
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function () {
+
+        const pdfPath = this.getAttribute("data-pdf");
+
+        if (!pdfPath) return;
+
+        // injecter le PDF
+        document.getElementById("pdfViewer").src = pdfPath;
+
+        // ouvrir modal Bootstrap
+        const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+        modal.show();
+    });
+
+});
+
+// nettoyer le iframe quand on ferme le modal
+document.getElementById("pdfModal").addEventListener("hidden.bs.modal", function () {
+    document.getElementById("pdfViewer").src = "";
+});
+</script>
+</section>
 	  
 	  
       
 	  
 <style>
+  .chcardE {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hover moderne */
+.chcardE:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Zone image */
+.chimgE {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fa, #eef1f5);
+}
+
+/* Titre carte */
+.chnmE {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+/* Body */
+.chbodyE {
+    padding: 12px;
+    text-align: center;
+}
+
+/* Description */
+.chroleE {
+    font-size: 12px;
+    color: #7a7a7a;
+}
+
+/* Petit effet de glow au hover */
+.chcardE::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,123,255,0.08), transparent 60%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.chcardE:hover::after {
+    opacity: 1;
+}
+
 .carousel-section {
   padding: 80px 0;
   background: #f9f5f0;
@@ -3932,7 +4103,7 @@ document.querySelectorAll(".chcard").forEach(card => {
 }
 .carousel-track {
   display: flex;
-  transition: transform 1s cubic-bezier(.4,0,.2,1);
+  transition: transform 2s cubic-bezier(.4,0,.2,1);
 }
 .carousel-slide {
   min-width: 100%;
@@ -4072,7 +4243,7 @@ document.querySelectorAll(".chcard").forEach(card => {
         </div>
 
         <div class="carousel-slide">
-          <img src="img/planification.jpeg" alt="MSP 2"/>
+          <img src="img/taxo.jpeg" alt="MSP 2"/>
           <div class="slide-caption">
             <span class="slide-tag">CRMEF</span>
             <h3>Atelier de Planification</h3>
