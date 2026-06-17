@@ -1723,12 +1723,61 @@ section {
 }
 
 .chcard {
-    cursor: pointer;
-    transition: transform 0.2s ease;
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
-.chcard:hover {
-    transform: translateY(-5px);
+.chcard-top {
+  height: 5px;
+  width: 100%;
+  background-color: #6C63FF; /* change par module */
+}
+
+.chcard-inner {
+  padding: 16px 16px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chbadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-bottom: 12px;
+  background: #EEEDFE;
+  color: #3C3489;
+}
+
+.chnm {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.chrole {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.chcard-footer {
+  border-top: 0.5px solid #e0e0e0;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+  color: #888;
 }
 
 /* ===================== TESTIMONIALS ===================== */
@@ -2887,6 +2936,69 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.catdesc{
+    font-size: 12px;
+    color: #7b7b7b;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+.catcard i{
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+.classe-scroll-container{
+    height: 600px;          /* Hauteur visible */
+    overflow-y: auto;       /* Défilement vertical */
+    overflow-x: hidden;
+    border-radius: 16px;
+}
+
+.classe-scroll-image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Scrollbar moderne */
+.classe-scroll-container::-webkit-scrollbar{
+    width: 8px;
+}
+
+.classe-scroll-container::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.classe-scroll-container::-webkit-scrollbar-thumb{
+    background: #1e3a8a;
+    border-radius: 10px;
+}
+
+.classe-scroll-container::-webkit-scrollbar-thumb:hover{
+    background: #0f2557;
+}
+.gitem.scroll-item {
+  height: 450px;        /* IMPORTANT */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* option: scrollbar stylée */
+.gitem.scroll-item::-webkit-scrollbar {
+  width: 5px;
+}
+
+.gitem.scroll-item::-webkit-scrollbar-thumb {
+  background: #185FA5;
+  border-radius: 10px;
+}
+.gitem.scroll-item img {
+  height: auto;
+  width: 100%;
+  object-fit: unset;   /* IMPORTANT */
+  display: block;
+}
    </style>
    </head>
    <body>
@@ -3086,7 +3198,7 @@ footer {
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                <span class="slbl">Expérience</span>
-               <h2 class="stitle">Stages en  <span>milieu scolaire</span></h2>
+               <h2 class="stitle">Action éducative en  <span>milieu scolaire</span></h2>
                <div class="sline"></div>
             </div>
             <div class="timeline" data-aos="fade-up">
@@ -3169,7 +3281,7 @@ footer {
    <small>Centre de formation<br/>des enseignants</small>
 </div>
                      <div class="amain"><img src="img/crmef2.jpeg" alt="Restaurant"/></div>
-                     <div class="asm"><img src="img/crmef.jpg" alt=""/></div>
+                     <div class="asm"><img src="img/crmef.jpeg" alt=""/></div>
                   </div>
                </div>
                <div class="col-lg-7" data-aos="fade-left">
@@ -3226,160 +3338,190 @@ Cette formation permet aux futurs enseignants de combiner connaissances théoriq
 
         <!-- Boutons S1 / S2 -->
         <div class="text-center mb-4">
-            <button class="filtbtn active" data-f="s1">S1</button>
-            <button class="filtbtn" data-f="s2">S2</button>
+            <button class="filtbtn active" data-f="s1">Semestre 1</button>
+            <button class="filtbtn" data-f="s2">Semestre 2</button>
         </div>
 
-        <div class="row g-3 justify-content-center">
+ 
+<div class="row g-3 justify-content-center">
 
-            <!-- Planification -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in">
-                <div class="catcard" data-pdf="docs/Rapport_Planification.pdf">
-                    <i class="fas fa-calendar-days"></i>
-                    <div class="catnm">Planification</div>
-                    <div class="catct">Mme. Rajae TAMRI</div>
-                </div>
-            </div>
-
-            <!-- Gestion 1 -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="70">
-                <div class="catcard" data-pdf="docs/Rapport_Gestion1.pdf">
-                    <i class="fas fa-folder-open"></i>
-                    <div class="catnm">Gestion 1</div>
-                    <div class="catct">Mme. Rajae TAMRI</div>
-                </div>
-            </div>
-
-            <!-- Didactique -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="140">
-                <div class="catcard" data-pdf="docs/Rapport_Didactique.pdf">
-                     <i class="fas fa-chalkboard-teacher"></i>
-                    <div class="catnm">Didactique</div>
-                    <div class="catct">Mme. Ouafae SERRAR</div>
-                </div>
-            </div>
-
-            <!-- Méthodologie -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="210">
-                <div class="catcard" data-pdf="docs/rapport_RA.pdf">
-                    <i class="fa fa-search"></i>
-                    <div class="catnm">Méthodologie de Recherche Action</div>
-                    <div class="catct">Mr. Soufian BARIBI</div>
-                </div>
-            </div>
-
-            <!-- Sciences de l'Éducation -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="280">
-                <div class="catcard" data-pdf="docs/rapport_se.pdf">
-                    <i class="fas fa-graduation-cap"></i>
-                    <div class="catnm">Sciences de l'Éducation</div>
-                    <div class="catct">Mr. Hassan Khouyi</div>
-                </div>
-            </div>
-
-            <!-- Renforcement 1 -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="350">
-                <div class="catcard" data-pdf="docs/Rapport_renf1.pdf">
-                    <i class="fas fa-book-open"></i>
-                    <div class="catnm">Renforcement 1</div>
-                    <div class="catct">Mr. Radouane IQDOUR</div>
-                </div>
-            </div>
-
-            <!-- Renforcement 2 -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="420">
-                <div class="catcard" data-pdf="docs/Rapport_renf2.pdf">
-                    <i class="fas fa-book-reader"></i>
-                    <div class="catnm">Renforcement 2</div>
-                    <div class="catct">Mr. Mohamed SNINEH</div>
-                </div>
-            </div>
-
-            <!-- TICE -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1" data-aos="zoom-in" data-aos-delay="490">
-                <div class="catcard" data-pdf="docs/Rapport_TICE.pdf">
-                    <i class="fas fa-laptop-code"></i>
-                    <div class="catnm">TICE</div>
-                    <div class="catct">Mr. Mohamed SNINEH</div>
-                </div>
-            </div>
-
-            <!-- Module S2 -->
-            <div class="row g-3 justify-content-center">
-
-            <!-- Evaluation -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in">
-                <div class="catcard" data-pdf="docs/Rapport_Evaluation.pdf">
-                    <i class="fas fa-clipboard-check"></i>
-                    <div class="catnm">Evaluation</div>
-                    <div class="catct">Mme. Rajae TAMRI</div>
-                </div>
-            </div>
-
-            <!-- Gestion 2 -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="70">
-                <div class="catcard" data-pdf="docs/Rapport_Module_Gestion2.pdf">
-                     <i class="fas fa-briefcase"></i>
-                    <div class="catnm">Gestion 2</div>
-                    <div class="catct">Mme. Rajae TAMRI</div>
-                </div>
-            </div>
-
-            <!-- Analyse des pratiques -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="140">
-                <div class="catcard" data-pdf="docs/Rapport_AP.pdf">
-                     <i class="fas fa-chart-line"></i>
-                    <div class="catnm">Analyse des pratiques</div>
-                    <div class="catct">Mme. Ouafae SERRAR</div>
-                </div>
-            </div>
-
-            <!-- Production didactique -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="210">
-                <div class="catcard" data-pdf="docs/rapport_pd.pdf">
-                     <i class="fas fa-pen-ruler"></i>
-                    <div class="catnm">Production didactique</div>
-                    <div class="catct">Mr. Soufian BARIBI</div>
-                </div>
-            </div>
-
-            <!-- Vie scolaire -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="280">
-                <div class="catcard" data-pdf="docs/Rapport_VS.pdf">
-                    <i class="fas fa-school"></i>
-                    <div class="catnm">Vie scolaire</div>
-                    <div class="catct">Mr. Hassan Khouyi</div>
-                </div>
-            </div>
-
-            <!-- Renforcement 3 -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="350">
-                <div class="catcard" data-pdf="docs/Rapport_Reseau.pdf">
-                    <i class="fas fa-book-open"></i>
-                    <div class="catnm">Renforcement 3</div>
-                    <div class="catct">Mr. Radouane IQDOUR</div>
-                </div>
-            </div>
-
-            <!-- Renforcement 4 -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="420">
-                <div class="catcard" data-pdf="docs/Rapport_Developpement.pdf">
-                    <i class="fas fa-book-reader"></i>
-                    <div class="catnm">Renforcement 4</div>
-                    <div class="catct">Mr. Radouane IQDOUR</div>
-                </div>
-            </div>
-
-            <!-- Deontologie -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2" data-aos="zoom-in" data-aos-delay="490">
-                <div class="catcard" data-pdf="docs/rapport_deonto.pdf">
-                    <i class="fas fa-scale-balanced"></i>
-                    <div class="catnm">Déontologie</div>
-                    <div class="catct">Mr. Abdeljebbar KARIMI</div>
-                </div>
-            </div> 
-
+    <!-- Planification -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/Rapport_Planification.pdf"
+             style="border-top:5px solid #6C63FF;">
+            <i class="fas fa-calendar-days" style="color:#6C63FF;"></i>
+            <div class="catnm">Planification</div>
+            <div class="catdesc">Organisation des apprentissages.</div>
+            <div class="catct">Mme. Rajae TAMRI</div>
         </div>
+    </div>
+
+    <!-- Gestion 1 -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/Rapport_Gestion1.pdf"
+             style="border-top:5px solid #1D9E75;">
+            <i class="fas fa-folder-open" style="color:#1D9E75;"></i>
+            <div class="catnm">Gestion 1</div>
+            <div class="catdesc">Gestion de la classe.</div>
+            <div class="catct">Mme. Rajae TAMRI</div>
+        </div>
+    </div>
+
+    <!-- Didactique -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/Rapport_Didactique.pdf"
+             style="border-top:5px solid #378ADD;">
+            <i class="fas fa-chalkboard-teacher" style="color:#378ADD;"></i>
+            <div class="catnm">Didactique</div>
+            <div class="catdesc">Méthodes d'enseignement.</div>
+            <div class="catct">Mme. Ouafae SERRAR</div>
+        </div>
+    </div>
+
+    <!-- Méthodologie -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/rapport_RA.pdf"
+             style="border-top:5px solid #F39C12;">
+            <i class="fa fa-search" style="color:#F39C12;"></i>
+            <div class="catnm">Méthodologie de Recherche Action</div>
+            <div class="catdesc">Conduite d'une recherche.</div>
+            <div class="catct">Mr. Soufian BARIBI</div>
+        </div>
+    </div>
+
+    <!-- Sciences de l'Éducation -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/rapport_se.pdf"
+             style="border-top:5px solid #E74C3C;">
+            <i class="fas fa-graduation-cap" style="color:#E74C3C;"></i>
+            <div class="catnm">Sciences de l'Éducation</div>
+            <div class="catdesc">Fondements de l'éducation.</div>
+            <div class="catct">Mr. Hassan Khouyi</div>
+        </div>
+    </div>
+
+    <!-- Renforcement 1 -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/Rapport_renf1.pdf"
+             style="border-top:5px solid #9B59B6;">
+            <i class="fas fa-book-open" style="color:#9B59B6;"></i>
+            <div class="catnm">Renforcement 1</div>
+            <div class="catdesc">Consolidation des acquis.</div>
+            <div class="catct">Mr. Radouane IQDOUR</div>
+        </div>
+    </div>
+
+    <!-- Renforcement 2 -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/Rapport_renf2.pdf"
+             style="border-top:5px solid #16A085;">
+            <i class="fas fa-book-reader" style="color:#16A085;"></i>
+            <div class="catnm">Renforcement 2</div>
+            <div class="catdesc">Approfondissement disciplinaire.</div>
+            <div class="catct">Mr. Mohamed SNINEH</div>
+        </div>
+    </div>
+
+    <!-- TICE -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s1">
+        <div class="catcard" data-pdf="docs/Rapport_TICE.pdf"
+             style="border-top:5px solid #00B8D4;">
+            <i class="fas fa-laptop-code" style="color:#00B8D4;"></i>
+            <div class="catnm">TICE</div>
+            <div class="catdesc">Intégration du numérique.</div>
+            <div class="catct">Mr. Mohamed SNINEH</div>
+        </div>
+    </div>
+
+    <!-- Évaluation -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/Rapport_Evaluation.pdf"
+             style="border-top:5px solid #FF6B81;">
+            <i class="fas fa-clipboard-check" style="color:#FF6B81;"></i>
+            <div class="catnm">Évaluation</div>
+            <div class="catdesc">Mesure des apprentissages.</div>
+            <div class="catct">Mme. Rajae TAMRI</div>
+        </div>
+    </div>
+
+    <!-- Gestion 2 -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/Rapport_Module_Gestion2.pdf"
+             style="border-top:5px solid #34495E;">
+            <i class="fas fa-briefcase" style="color:#34495E;"></i>
+            <div class="catnm">Gestion 2</div>
+            <div class="catdesc">Pilotage de la classe.</div>
+            <div class="catct">Mme. Rajae TAMRI</div>
+        </div>
+    </div>
+
+    <!-- Analyse des pratiques -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/Rapport_AP.pdf"
+             style="border-top:5px solid #2ECC71;">
+            <i class="fas fa-chart-line" style="color:#2ECC71;"></i>
+            <div class="catnm">Analyse des pratiques</div>
+            <div class="catdesc">Réflexion sur les pratiques.</div>
+            <div class="catct">Mme. Ouafae SERRAR</div>
+        </div>
+    </div>
+
+    <!-- Production didactique -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/rapport_pd.pdf"
+             style="border-top:5px solid #D35400;">
+            <i class="fas fa-pen-ruler" style="color:#D35400;"></i>
+            <div class="catnm">Production didactique</div>
+            <div class="catdesc">Création de ressources pédagogiques.</div>
+            <div class="catct">Mr. Soufian BARIBI</div>
+        </div>
+    </div>
+
+    <!-- Vie scolaire -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/Rapport_VS.pdf"
+             style="border-top:5px solid #8E44AD;">
+            <i class="fas fa-school" style="color:#8E44AD;"></i>
+            <div class="catnm">Vie scolaire</div>
+            <div class="catdesc">Organisation de l'établissement.</div>
+            <div class="catct">Mr. Hassan Khouyi</div>
+        </div>
+    </div>
+
+    <!-- Renforcement 3 -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/Rapport_Reseau.pdf"
+             style="border-top:5px solid #27AE60;">
+            <i class="fas fa-book-open" style="color:#27AE60;"></i>
+            <div class="catnm">Renforcement 3</div>
+            <div class="catdesc">Notions de réseaux.</div>
+            <div class="catct">Mr. Radouane IQDOUR</div>
+        </div>
+    </div>
+
+    <!-- Renforcement 4 -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/Rapport_Developpement.pdf"
+             style="border-top:5px solid #E67E22;">
+            <i class="fas fa-book-reader" style="color:#E67E22;"></i>
+            <div class="catnm">Renforcement 4</div>
+            <div class="catdesc">Développement informatique.</div>
+            <div class="catct">Mr. Radouane IQDOUR</div>
+        </div>
+    </div>
+
+    <!-- Déontologie -->
+    <div class="col-6 col-sm-4 col-md-3 col-lg-3 module-card" data-semestre="s2">
+        <div class="catcard" data-pdf="docs/rapport_deonto.pdf"
+             style="border-top:5px solid #C0392B;">
+            <i class="fas fa-scale-balanced" style="color:#C0392B;"></i>
+            <div class="catnm">Déontologie</div>
+            <div class="catdesc">Valeurs et éthique professionnelle.</div>
+            <div class="catct">Mr. Abdeljebbar KARIMI</div>
+        </div>
+    </div>
+
+</div>
     </div>
 </section>
 
@@ -3537,9 +3679,107 @@ modules.forEach(module => {
       </div>
    </div>
 </section>
+<section class="carousel-section">
+  <div class="section-header">
+    <span class="slbl">Galerie</span>
+    <h2 class="stitle">Moments de la <span>Formation</span></h2>
+    <div class="sline"></div>
+  </div>
 
-      <!-- SPECIAL OFFER -->
-      <section id="special">
+  <div class="carousel-wrap">
+
+    <div class="carousel-track-outer">
+      <div class="carousel-track" data-carousel>
+
+        <div class="carousel-slide">
+          <img src="img/etudsarduino.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Atelier Arduino</h3>
+            <p>Atelier d'initiation à Arduino | Feu de Circulation</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/dir.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Fin de module</h3>
+            <p>Photo de groupe avec le directeur | fin du module de Déontologie</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/arduino2.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Atelier Arduino</h3>
+            <p>Atelier d'initiation à Arduino | Feu de Circulation</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/taxo.jpeg" alt="MSP 2"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Atelier de Planification</h3>
+            <p>Réalisation d'un Flip Chart basé sur la Taxonomie de Bloom</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/integration.jpeg" alt="MSP 3"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Journée d'intégration</h3>
+            <p>Journée d'intégration organisé par le club Pen CRMEF</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/coursarchi.jpeg" alt="MSP 4"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Cours | Renforcement 1</h3>
+            <p>Animation d'un cours sur la numération et le codage de l’information</p>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="img/tparchi.jpeg" alt="MSP 5"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>TP | Architecture des Ordinateurs</h3>
+            <p>Atelier sur l'architecture des ordinateurs</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/vs.jpeg" alt="MSP 5"/>
+          <div class="slide-caption">
+            <span class="slide-tag">CRMEF</span>
+            <h3>Fin de module</h3>
+            <p>Photo de groupe avec le professeur | fin du module de Vie Scolaire</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/iftar.jpeg" alt="MSP 5"/>
+          <div class="slide-caption">
+            <span class="slide-tag">Moment de partage</span>
+            <h3>Activité hors du cadre de formation</h3>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+
+    <button class="carousel-btn btn-prev" id="prev" aria-label="Précédent">&#8592;</button>
+    <button class="carousel-btn btn-next" id="next" aria-label="Suivant">&#8594;</button>
+
+  </div>
+
+  <div class="carousel-dots" id="dots"></div>
+  <div class="slide-counter" id="counter">1 / 5</div>
+</section>
+ <section id="special">
          <div class="spbg"></div>
          <div class="container" style="position:relative;z-index:2;">
             <div class="row align-items-center g-5">
@@ -3559,7 +3799,6 @@ modules.forEach(module => {
             </div>
          </div>
       </section>
-	  
 	  <!-- ABOUT -->
       <section id="msp">
    <div class="container">
@@ -3626,7 +3865,7 @@ modules.forEach(module => {
                      <i class="fas fa-user-tie"></i>
                   </div>
                   <div>
-                     <h6">Professeure encadrante : Mme Fatima Ezzahra Nadifiyine</h6>
+                     <h6>Professeure encadrante : Mme Fatima Ezzahra Nadifiyine</h6>
                   </div>
                </div>
 
@@ -3646,6 +3885,83 @@ modules.forEach(module => {
    </div>
 </section>
 
+<!-- ABOUT -->
+      <section id="classe">
+   <div class="container">
+      <div class="row align-items-center g-5">
+
+         <!-- TEXT -->
+         <div class="col-lg-7" data-aos="fade-left">
+
+            <span class="slbl">Vue d'ensemble</span>
+
+            <h2 class="stitle text-start">
+               De <span>la classe </span>
+            </h2>
+
+            <div class="sline lft"></div>
+
+            <p class="sdesc mb-4">
+               RLa classe représente un espace d’apprentissage dynamique où les élèves développent leurs connaissances et leurs compétences dans un environnement favorable à l’échange, à la collaboration et à l’utilisation des outils numériques. Grâce à une organisation adaptée et à des ressources pédagogiques diversifiées, elle offre des conditions optimales pour un enseignement interactif et stimulant.
+            </p>
+
+            <!-- CADRE GENERAL -->
+            <div class="mb-4">
+
+               <div class="sptag">
+                  <i class="fas fa-info-circle"></i> IDENTIFICATION DE LA CLASSE
+               </div>
+
+               <div class="fti">
+                  <div class="ftico r">
+                     <i class="fas fa-school"></i>
+                  </div>
+                  <div>
+                     <h6>Salle informatique équipée</h6>
+                  </div>
+               </div>
+
+               <div class="fti">
+                  <div class="ftico y">
+                     <i class="fas fa-user-tie"></i>
+                  </div>
+                  <div>
+                     <h6>Effectif : 34 élèves</h6>
+                  </div>
+               </div>
+
+               <div class="fti">
+                  <div class="ftico g">
+                     <i class="fas fa-layer-group"></i>
+                  </div>
+                  <div>
+                     <h6>Niveau : Tronc commun</h6>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+         
+         <!-- IMAGE -->
+         <div class="col-lg-5" data-aos="fade-right">
+            <div class="astack">
+
+
+               <div class="classe-scroll-container">
+            <img src="img/classe.png" alt="Classe" class="classe-scroll-image">
+        </div>
+
+        <div class="asm">
+            <img src="img/cls.jpeg" alt="Lycée">
+        </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
       <section id="gallery">
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
@@ -3654,45 +3970,41 @@ modules.forEach(module => {
                <div class="sline"></div>
             </div>
             <div class="ggrid" data-aos="fade-up">
-               <div class="gitem"
-                  data-gi="0"
-                  data-gimg="img/portfolio/work1.jpg"
-                  data-gtitle="Gourmet Burgers"
-                  data-gdesc="Our award-winning smash burgers, hand-crafted with 100% premium beef, aged cheddar and house-made sauces.">
-                  <img src="img/msp6.jpeg" alt="Burgers"/>
-               </div>
-               <div class="gitem"
-                  data-gi="1"
-                  data-gimg="img/portfolio/work2.jpg"
-                  data-gtitle="Wood-Fired Pizza"
-                  data-gdesc="Authentic Neapolitan-style pizzas fired at 900deg F in our wood-burning stone oven for the perfect char.">
-                  <img src="img/msp4.jpeg" alt="Pizza"/>
-               </div>
-               <div class="gitem"
-                  data-gi="2"
-                  data-gimg="img/portfolio/work3.jpg"
-                  data-gtitle="Crispy Fried Chicken"
-                  data-gdesc="Double-brined, hand-battered chicken fried to golden perfection using our 15-spice secret blend.">
-                  <img src="img/msp3.jpeg" alt="Chicken"/>
-               </div>
-               <div class="gitem"
-                  data-gi="3"
-                  data-gimg="img/portfolio/work4.jpg"
-                  data-gtitle="Sweet Desserts"
-                  data-gdesc="Handcrafted desserts - from molten lava cakes to artisan ice cream sundaes and seasonal pastries.">
-                  <img src="img/msp2.jpeg" alt="Desserts"/>
-               </div>
-               <div class="gitem"
-                  data-gi="4"
-                  data-gimg="img/portfolio/work5.jpg"
-                  data-gtitle="Fresh Wraps &amp; Rolls"
-                  data-gdesc="Loaded fresh wraps packed with grilled proteins, crunchy vegetables and our house-made sauces.">
-                  <img src="img/msp.jpeg" alt="Wraps"/>
-               </div>
-            </div>
+
+   <div class="gitem scroll-item"
+      data-gi="0"
+      data-gimg="img/portfolio/work1.jpg"
+      data-gtitle="Gourmet Burgers"
+      data-gdesc="Our award-winning smash burgers...">
+      <img src="img/fiche_jc.png" alt="Burgers"/>
+   </div>
+
+   <div class="gitem"
+      data-gi="1"
+      data-gimg="img/portfolio/work2.jpg">
+      <img src="img/msp4.jpeg" alt="Pizza"/>
+   </div>
+
+   <div class="gitem"
+      data-gi="2">
+      <img src="img/msp3.jpeg" alt="Chicken"/>
+   </div>
+
+   <div class="gitem"
+      data-gi="3">
+      <img src="img/msp2.jpeg" alt="Desserts"/>
+   </div>
+
+   <div class="gitem"
+      data-gi="4">
+      <img src="img/msp.jpeg" alt="Wraps"/>
+   </div>
+
+</div>
             
            <div class="mt-4 d-flex justify-content-center">
 
+    
     <button type="button"
             class="btn-red"
             onclick="window.open('docs/rapport2.pdf', '_blank')">
@@ -3728,153 +4040,170 @@ modules.forEach(module => {
                <div class="sline"></div>
             </div>
             <div class="row g-4">
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="0">
-                  <div class="chcard" data-pdf="docs/rapport1.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Rapport 1</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche de découverte</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
-                  <div class="chcard" data-pdf="docs/Rapport_MSP.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Rapport 2</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole"> Rapport de stage </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
-                  <div class="chcard" data-pdf="docs/fiche1.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 1</div>
-                  
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard" data-pdf="docs/fiche2.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 2</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard" data-pdf="docs/fiche3.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 3</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard" data-pdf="docs/fiche4.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 4</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <br/><br/>
-            <div class="row g-4">
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="0">
-                  <div class="chcard" data-pdf="docs/fiche5.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 5</div>
-                     </div>
-                     <div class="chbody">
-                        
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
-                  <div class="chcard" data-pdf="docs/fiche6.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 6</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
-                  <div class="chcard" data-pdf="docs/fiche7.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 7</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard" data-pdf="docs/fiche8.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 8</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation & Fiche Pédagogique</div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard" data-pdf="docs/fiche9.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 9</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-                <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
-                  <div class="chcard" data-pdf="docs/fiche10_11.pdf">
-                     <div class="chimg" style="background-color: #f0f0f0;">
-                        <div class="chnm" style="text-align: center; margin: 20px; color: #000000;">Séance 10 & 11</div>
-                     </div>
-                     <div class="chbody">
-                        <div class="chrole">Fiche d'observation</div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <script>
+         <!-- Ligne 1 : Rapport 1, Rapport 2, Séances 1-4 -->
+<!-- Ligne 1 -->
+<div class="row g-4">
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up">
+    <div class="chcard" data-pdf="docs/rapport1.pdf">
+      <div class="chcard-top" style="background-color:#6C63FF;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#EEEDFE;color:#3C3489;">📄 Rapport 1</span>
+        <div class="chnm">Fiche de découverte</div>
+        <div class="chrole">Présentation du lycée Mohamed VI.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
+    <div class="chcard" data-pdf="docs/rapport2.pdf">
+      <div class="chcard-top" style="background-color:#1D9E75;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#E1F5EE;color:#085041;">📄 Rapport 2</span>
+        <div class="chnm">Rapport de stage</div>
+        <div class="chrole">Synthèse du stage effectué.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
+    <div class="chcard" data-pdf="docs/fiche1.pdf">
+      <div class="chcard-top" style="background-color:#378ADD;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#E6F1FB;color:#0C447C;">📄 Séance 1</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Observation générale.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
+    <div class="chcard" data-pdf="docs/fiche2.pdf">
+      <div class="chcard-top" style="background-color:#F39C12;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#FFF2DD;color:#A55A00;">📄 Séance 2</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Observation générale.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="320">
+    <div class="chcard" data-pdf="docs/fiche3.pdf">
+      <div class="chcard-top" style="background-color:#E74C3C;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#FDECEA;color:#9C1F14;">📄 Séance 3</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Séance animée par Hiba et Soukaina</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+    <div class="chcard" data-pdf="docs/fiche4.pdf">
+      <div class="chcard-top" style="background-color:#9B59B6;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#F3E8FB;color:#5A2C80;">📄 Séance 4</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Observation et analyse.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- Ligne 2 -->
+<div class="row g-4 mt-1">
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up">
+    <div class="chcard" data-pdf="docs/fiche5.pdf">
+      <div class="chcard-top" style="background-color:#16A085;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#E7F8F4;color:#0D6552;">📄 Séance 5</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Séance animée par Mouhsine et Mahdi</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="80">
+    <div class="chcard" data-pdf="docs/fiche6.pdf">
+      <div class="chcard-top" style="background-color:#D35400;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#FDEBD9;color:#8A3600;">📄 Séance 6</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Contrôle écrit | Algorithmique.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="160">
+    <div class="chcard" data-pdf="docs/fiche7.pdf">
+      <div class="chcard-top" style="background-color:#2ECC71;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#EAFBF1;color:#1E7A45;">📄 Séance 7</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Séance animée par les 4 stagiaires</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="240">
+    <div class="chcard" data-pdf="docs/fiche8.pdf">
+      <div class="chcard-top" style="background-color:#34495E;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#EAEFF4;color:#22313F;">📄 Séance 8</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">TP animé par Hiba et Mahdi.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="320">
+    <div class="chcard" data-pdf="docs/fiche9.pdf">
+      <div class="chcard-top" style="background-color:#FF6B81;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#FFE9EE;color:#B21F4B;">📄 Séance 9</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Contrôle pratique | Python.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+    <div class="chcard" data-pdf="docs/fiche10_11.pdf">
+      <div class="chcard-top" style="background-color:#00B8D4;"></div>
+      <div class="chcard-inner">
+        <span class="chbadge" style="background:#E3FAFE;color:#007188;">📄 Séance 10 & 11</span>
+        <div class="chnm">Fiche d'observation</div>
+        <div class="chrole">Cours et contrôles pratiques | Excel.</div>
+      </div>
+      <div class="chcard-footer">→</div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
 document.querySelectorAll(".chcard").forEach(card => {
-
-    card.style.cursor = "pointer";
-
-    card.addEventListener("click", function () {
-
-        const pdfPath = this.getAttribute("data-pdf");
-
-        if (!pdfPath) return;
-
-        document.getElementById("pdfViewer").src = pdfPath;
-
-        const modal = new bootstrap.Modal(
-            document.getElementById("pdfModal")
-        );
-
-        modal.show();
-    });
-
+  card.style.cursor = "pointer";
+  card.addEventListener("click", function () {
+    const pdfPath = this.getAttribute("data-pdf");
+    if (!pdfPath) return;
+    document.getElementById("pdfViewer").src = pdfPath;
+    const modal = new bootstrap.Modal(document.getElementById("pdfModal"));
+    modal.show();
+  });
 });
 </script>
       </section>
@@ -4207,31 +4536,15 @@ document.getElementById("pdfModal").addEventListener("hidden.bs.modal", function
 <section class="carousel-section">
   <div class="section-header">
     <span class="slbl">Galerie</span>
-    <h2 class="stitle">Moments de la <span>Formation</span></h2>
+    <h2 class="stitle">Moments de la <span>MSP</span></h2>
     <div class="sline"></div>
   </div>
 
   <div class="carousel-wrap">
 
     <div class="carousel-track-outer">
-      <div class="carousel-track" id="track">
+      <div class="carousel-track" data-carousel>
 
-        <div class="carousel-slide">
-          <img src="img/etudsarduino.jpeg" alt="MSP 1"/>
-          <div class="slide-caption">
-            <span class="slide-tag">CRMEF</span>
-            <h3>Atelier Arduino</h3>
-            <p>Atelier d'initiation à Arduino | Feu de Circulation</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <img src="img/arduino2.jpeg" alt="MSP 1"/>
-          <div class="slide-caption">
-            <span class="slide-tag">CRMEF</span>
-            <h3>Atelier Arduino</h3>
-            <p>Atelier d'initiation à Arduino | Feu de Circulation</p>
-          </div>
-        </div>
 
         <div class="carousel-slide">
           <img src="img/hibaprof.jpeg" alt="MSP 1"/>
@@ -4241,50 +4554,50 @@ document.getElementById("pdfModal").addEventListener("hidden.bs.modal", function
             <p>Mise en situation professionnelle — QCM sur Kahoot</p>
           </div>
         </div>
-
-        <div class="carousel-slide">
-          <img src="img/taxo.jpeg" alt="MSP 2"/>
+<div class="carousel-slide">
+          <img src="img/ctrl.jpeg" alt="MSP 1"/>
           <div class="slide-caption">
-            <span class="slide-tag">CRMEF</span>
-            <h3>Atelier de Planification</h3>
-            <p>Réalisation d'un Flip Chart basé sur la Taxonomie de Bloom</p>
+            <span class="slide-tag">MSP</span>
+            <h3>Lycée Technique Mohammed VI</h3>
+            <p>Supervision de l'évaluation</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/prof.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">MSP</span>
+            <h3>Lycée Technique Mohammed VI</h3>
+            <p>Exercices de consolidation | Algorithmique</p>
           </div>
         </div>
 
         <div class="carousel-slide">
-          <img src="img/integration.jpeg" alt="MSP 3"/>
+          <img src="img/msp6.jpeg" alt="MSP 1"/>
           <div class="slide-caption">
-            <span class="slide-tag">CRMEF</span>
-            <h3>Journée d'intégration</h3>
-            <p>Journée d'intégration organisé par le club Pen CRMEF</p>
+            <span class="slide-tag">MSP</span>
+            <h3>Lycée Technique Mohammed VI</h3>
+            <p>Journée coding python — Etape 2</p>
+          </div>
+        </div>
+        
+        <div class="carousel-slide">
+          <img src="img/premiers.jpeg" alt="MSP 1"/>
+          <div class="slide-caption">
+            <span class="slide-tag">MSP</span>
+            <h3>Lycée Technique Mohammed VI</h3>
+            <p>Journée coding python — Remise des attestations</p>
           </div>
         </div>
 
         <div class="carousel-slide">
-          <img src="img/coursarchi.jpeg" alt="MSP 4"/>
+          <img src="img/py.jpeg" alt="MSP 1"/>
           <div class="slide-caption">
-            <span class="slide-tag">CRMEF</span>
-            <h3>Cours | Renforcement 1</h3>
-            <p>Animation d'un cours sur la numération et le codage de l’information</p>
+            <span class="slide-tag">MSP</span>
+            <h3>Lycée Technique Mohammed VI</h3>
+            <p>Journée coding python — Etape 3</p>
           </div>
         </div>
-
-        <div class="carousel-slide">
-          <img src="img/tparchi.jpeg" alt="MSP 5"/>
-          <div class="slide-caption">
-            <span class="slide-tag">CRMEF</span>
-            <h3>TP | Architecture des Ordinateurs</h3>
-            <p>Atelier sur l'architecture des ordinateurs</p>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <img src="img/iftar.jpeg" alt="MSP 5"/>
-          <div class="slide-caption">
-            <span class="slide-tag">Moment de partage</span>
-            <h3>Activité hors du cadre de formation</h3>
-          </div>
-        </div>
+        
         
 
       </div>
@@ -4300,49 +4613,65 @@ document.getElementById("pdfModal").addEventListener("hidden.bs.modal", function
 </section>
 
 <script>
-var track = document.getElementById('track');
-var dotsWrap = document.getElementById('dots');
-var counter = document.getElementById('counter');
-var slides = track.querySelectorAll('.carousel-slide');
-var total = slides.length;
-var current = 0;
-var autoTimer;
+document.querySelectorAll('.carousel-section').forEach(section => {
 
-slides.forEach(function(_, i) {
-  var d = document.createElement('button');
-  d.className = 'dot' + (i === 0 ? ' active' : '');
-  d.setAttribute('aria-label', 'Slide ' + (i+1));
-  d.addEventListener('click', function() { goTo(i); });
-  dotsWrap.appendChild(d);
-});
+  const track = section.querySelector('.carousel-track');
+  const dotsWrap = section.querySelector('.carousel-dots');
+  const counter = section.querySelector('.slide-counter');
+  const slides = section.querySelectorAll('.carousel-slide');
 
-function goTo(n) {
-  current = (n + total) % total;
-  track.style.transform = 'translateX(-' + (current * 100) + '%)';
-  dotsWrap.querySelectorAll('.dot').forEach(function(d, i) {
-    d.classList.toggle('active', i === current);
+  const prev = section.querySelector('.btn-prev');
+  const next = section.querySelector('.btn-next');
+
+  let total = slides.length;
+  let current = 0;
+  let autoTimer;
+
+  // create dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
   });
-  counter.textContent = (current + 1) + ' / ' + total;
-}
 
-document.getElementById('prev').addEventListener('click', function() {
-  goTo(current - 1);
-  restartAuto();
-});
-document.getElementById('next').addEventListener('click', function() {
-  goTo(current + 1);
-  restartAuto();
-});
+  function goTo(n) {
+    current = (n + total) % total;
 
-function startAuto() {
-  autoTimer = setInterval(function() { goTo(current + 1); }, 3500);
-}
-function restartAuto() {
-  clearInterval(autoTimer);
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    dotsWrap.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+
+    if (counter) {
+      counter.textContent = `${current + 1} / ${total}`;
+    }
+  }
+
+  prev.addEventListener('click', () => {
+    goTo(current - 1);
+    restartAuto();
+  });
+
+  next.addEventListener('click', () => {
+    goTo(current + 1);
+    restartAuto();
+  });
+
+  function startAuto() {
+    autoTimer = setInterval(() => goTo(current + 1), 3500);
+  }
+
+  function restartAuto() {
+    clearInterval(autoTimer);
+    startAuto();
+  }
+
   startAuto();
-}
 
-startAuto();
+});
 </script>
 
       <!-- TESTIMONIALS -->
@@ -4357,7 +4686,11 @@ startAuto();
                   <div class="swiper-slide">
                      <div class="tescard">
                         <div class="tesq">"</div>
-                        <p class="testxt">Je tiens à exprimer ma profonde gratitude à toutes les personnes qui ont contribué, de près ou de loin, à la réussite de mon parcours de formation.<br/>À ma famille, mes enseignants du CRMEF, la professeure accueillante ainsi que l’équipe de direction du lycée Mohamed VI, merci pour votre soutien, votre accompagnement et votre contribution à la réussite de ma formation.</p>
+                        <p class="testxt">Je tiens à exprimer ma profonde gratitude à toutes les personnes qui ont contribué, de près ou de loin, à la réussite de mon parcours de formation.
+
+<br/> J’adresse un remerciement tout particulier à <b>Mme. Fatima Ezzahra Nadifiyine</b>, professeure accueillante, pour son accompagnement bienveillant, son encadrement attentif et la qualité de son soutien pédagogique tout au long de cette expérience.
+
+<br/> Je remercie également <b>ma famille</b>, mes <b>enseignants du CRMEF</b> ainsi que <b>l’équipe de direction du lycée Mohammed VI</b>, pour leur soutien constant, leur disponibilité et leur contribution précieuse à la réussite de ma formation.</p>
                         <div class="tesauth">
                            <img src="img/hiba.jpeg" alt=""/>
                            <div>
